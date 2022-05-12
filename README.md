@@ -15,9 +15,10 @@
   <li>Initiation Postman</li>
 <ul>
 
+<p>
+>Languages ( ***Java*** , ***Hibernate*** , ***Spring*** , ***JS*** , ***Angular*** , ***HTML*** , ***SCSS*** , ***BOOTSRAAP*** ) 
+</p>
   
-Languages ( **Java** , **Hibernate** , **Spring** , **JS** , **Angular** , **HTML** , **SCSS** , **BOOTSRAAP** ) 
-
 ### source 
 
   ![image](https://user-images.githubusercontent.com/70025681/168039635-49ecf64e-1f5d-41c3-b649-004fc11506e8.png)
