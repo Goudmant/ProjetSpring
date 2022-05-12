@@ -12,9 +12,9 @@ public class ThemeMapper {
 
     public ThemeDTO ToTdo (Theme theme){
         ThemeDTO dto = new ThemeDTO();
-        dto.setId(dto.getId());
-        dto.setNametheme(dto.getNametheme());
-        dto.setCategories(dto.getCategories());
+        dto.setId(theme.getIdThemes());
+        dto.setNametheme(theme.getNametheme());
+        dto.setCategories(theme.getCategories());
 
         return dto;
     }

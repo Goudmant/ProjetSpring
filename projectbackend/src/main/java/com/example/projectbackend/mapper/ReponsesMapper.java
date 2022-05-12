@@ -1,13 +1,12 @@
 package com.example.projectbackend.mapper;
 
 import com.example.projectbackend.model.dto.ReponsesDTO;
-import com.example.projectbackend.model.entity.Patient;
 import com.example.projectbackend.model.entity.Reponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RéponsesMapper {
+public class ReponsesMapper {
 
     @Autowired
     private PatientMapper patientMapper;
@@ -15,7 +14,11 @@ public class RéponsesMapper {
     @Autowired
     private QuestionsMapper questionsMapper;
 
+
     public ReponsesDTO ToDto (Reponses reponses){
+        if (reponses == null){
+            return null;
+        }
         ReponsesDTO dto = new ReponsesDTO();
         dto.setId(reponses.getIdReponse());
         dto.setNomReponse(reponses.getNomReponse());

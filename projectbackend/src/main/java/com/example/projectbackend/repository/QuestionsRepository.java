@@ -11,4 +11,5 @@ import java.util.Set;
 
 public interface QuestionsRepository extends JpaRepository<Questions, Integer>{
     // Questions findByName (String name);
+
 }

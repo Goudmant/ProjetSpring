@@ -37,6 +37,9 @@ public class ThemeDTO {
         this.categories = categories;
     }
 
+    public static void addALL(ThemeDTO themeDTO) {
+    }
+
     //#endregion
 
     //////////////////////////////////////////////////////////

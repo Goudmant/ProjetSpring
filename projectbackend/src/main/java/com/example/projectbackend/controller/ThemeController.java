@@ -18,7 +18,7 @@ public class ThemeController {
     public Set<ThemeDTO> getThemes(){
         return  themeService.getThemes();}
     @PostMapping
-    public Set<ThemeDTO> save (@RequestBody ThemeDTO themeDTO) {
-        return (Set<ThemeDTO>) themeService.save(themeDTO);
+    public ThemeDTO save (@RequestBody ThemeDTO themeDTO) {
+        return themeService.save(themeDTO);
     }
 }
