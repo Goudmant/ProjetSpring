@@ -5,19 +5,24 @@
 ## Projet A -> Z ( **BACK** / **FRONT** )
 
 **Création d'un questionnaire médical** 
+***
 
-<ul>
+<ol>
   <li>Création de projet ( diagramme des tables ) *Voir source.</li>
   <li>Création des tables SQL Java Hibernate</li>
   <li>Mise en relation</li>
   <li>Mise en place de la structure</li>
   <li> Entity , DTO , Repository , Mapper , Controller , Service </li>
   <li>Initiation Postman</li>
-<ul>
-
+<ol>
+  
+***
+  
 >
 >Languages ( **Java** , **Hibernate** , **Spring** , **JS** , **Angular** , **HTML** , **SCSS** , **BOOTSRAAP** ) 
 >
+  
+***
   
 ### source 
 
