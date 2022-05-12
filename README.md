@@ -11,12 +11,12 @@
   <li>Création des tables SQL Java Hibernate</li>
   <li>Mise en relation</li>
   <li>Mise en place de la structure</li>
-  <li> **Entity** , **DTO** , **Repository** , **Mapper** , **Controller** , **Service** </li>
+  <li> *Entity* , *DTO* , *Repository* , *Mapper* , *Controller* , *Service* </li>
   <li>Initiation Postman</li>
 <ul>
 
 <p>
->Languages ( ***Java*** , ***Hibernate*** , ***Spring*** , ***JS*** , ***Angular*** , ***HTML*** , ***SCSS*** , ***BOOTSRAAP*** ) 
+Languages ( **Java** , **Hibernate** , **Spring** , **JS** , **Angular** , **HTML** , **SCSS** , **BOOTSRAAP** ) 
 </p>
   
 ### source 
