@@ -1,39 +1,34 @@
 package com.example.projectbackend.controller;
 
+import com.example.projectbackend.model.dto.ReponsesDTO;
 import com.example.projectbackend.model.entity.Questions;
 import com.example.projectbackend.model.entity.Reponses;
 import com.example.projectbackend.service.ReponseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/reponse")
 public class ReponseController {
     @Autowired
     private ReponseService reponseService;
 
-    @PostMapping
-    public ReponsesDTO save (@RequestBody ReponseDTO reponseDTO){
-        return reponseService.save(reponseDTO);
+    @PostMapping("{idQuestion}/{idPatient}")
+    public ReponsesDTO save (@RequestBody ReponsesDTO reponseDTO, @PathVariable int idQuestion, @PathVariable int idPatient){
+        return reponseService.save(reponseDTO, idQuestion, idPatient);
     }
 
-    @PutMapping("/Question/{idReponse}")
-    public ReponsesDTO addquestions (@PathVariable int idReponses,@RequestParam int id questions){
-        return reponseService.addQuestions(idReponses, idQuestions);
-    }
-    @GetMapping("/reponses/{idQuestion}")
+    @GetMapping("{idQuestion}")
     public List<ReponsesDTO> getAllByQuestions (@PathVariable int idQuestions){
-        return ReponseService.getAllByQuestions(idQuestions);
+        return reponseService.getAllByQuestion(idQuestions);
     }
-    ////////////////////////////////////////
-    //TODO à verifier une liste de toutes les reponses lié a question
-    @PostMapping
-    public Set<Reponses> findAllReponse(){
-        return Questions.createQuery(Reponses.class).getQuestionsSet();
+
+    @GetMapping
+    public List<ReponsesDTO> getFindAllReponses(){
+        return reponseService.getAllReponses();
     }
-    //////////////////////////////////////////
+
 }

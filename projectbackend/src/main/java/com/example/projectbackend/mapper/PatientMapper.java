@@ -14,16 +14,20 @@ public class PatientMapper {
     private ThemeMapper themeMapper;
 
     public PatientDTO ToDto (Patient patient) {
+        System.out.println(patient.getFirstname());
         PatientDTO dto = new PatientDTO();
-        dto.setId(dto.getId());
-        dto.setLastname(dto.getLastname());
-        dto.setFirstname(dto.getFirstname());
-        dto.setPhone(dto.getPhone());
-        dto.setMail(dto.getMail());
-        dto.setTheme(patient.getTheme()
-                .stream()
-                .map(themeMapper::ToTdo)
-                .collect(Collectors.toSet()));
+        dto.setId(patient.getIdPatients());
+        dto.setLastname(patient.getLastname());
+        dto.setFirstname(patient.getFirstname());
+        dto.setPhone(patient.getPhone());
+        dto.setMail(patient.getMail());
+        if(patient.getTheme() != null) {
+
+            dto.setTheme(patient.getTheme()
+                    .stream()
+                    .map(themeMapper::ToTdo)
+                    .collect(Collectors.toSet()));
+        }
 
         return dto;
     }

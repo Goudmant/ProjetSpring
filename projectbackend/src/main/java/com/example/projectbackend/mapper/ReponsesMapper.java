@@ -32,8 +32,14 @@ public class ReponsesMapper {
         Reponses entity = new Reponses();
         entity.setIdReponse(reponsesDTO.getId());
         entity.setNomReponse(reponsesDTO.getNomReponse());
-        entity.setPatient(patientMapper.toEntity(reponsesDTO.getPatient()));
-        entity.setQuestion(questionsMapper.toEntity(reponsesDTO.getQuestion()));
+        if (reponsesDTO.getPatient() != null) {
+
+            entity.setPatient(patientMapper.toEntity(reponsesDTO.getPatient()));
+        }
+        if (reponsesDTO.getQuestion() != null) {
+
+            entity.setQuestion(questionsMapper.toEntity(reponsesDTO.getQuestion()));
+        }
 
         return entity;
     }

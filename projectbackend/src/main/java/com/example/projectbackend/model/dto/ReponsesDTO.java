@@ -86,7 +86,6 @@ public class ReponsesDTO {
         return patient.getId();
     }
 
-
     //#endregion
 
 }
