@@ -16,11 +16,24 @@ public class ReponseController {
     @Autowired
     private ReponseService reponseService;
 
+    @PostMapping
+    public ReponsesDTO save (@RequestBody ReponseDTO reponseDTO){
+        return reponseService.save(reponseDTO);
+    }
+
+    @PutMapping("/Question/{idReponse}")
+    public ReponsesDTO addquestions (@PathVariable int idReponses,@RequestParam int id questions){
+        return reponseService.addQuestions(idReponses, idQuestions);
+    }
+    @GetMapping("/reponses/{idQuestion}")
+    public List<ReponsesDTO> getAllByQuestions (@PathVariable int idQuestions){
+        return ReponseService.getAllByQuestions(idQuestions);
+    }
     ////////////////////////////////////////
     //TODO à verifier une liste de toutes les reponses lié a question
-//    @PostMapping
-//    public Set<Reponses> findAllReponse(){
-//        return Questions.createQuery(Reponses.class).getQuestionsSet();
-//    }
+    @PostMapping
+    public Set<Reponses> findAllReponse(){
+        return Questions.createQuery(Reponses.class).getQuestionsSet();
+    }
     //////////////////////////////////////////
 }
