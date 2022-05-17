@@ -78,6 +78,10 @@ public class Medecin {
     public void setConseils(Set<Conseil> conseils) {
         this.conseils = conseils;
     }
+///////////////////////////////////////////////////////////
+    public void add(Medecin medecin) {
+    }
+///////////////////////////////////////////////////////////
 
 
     //#endregion

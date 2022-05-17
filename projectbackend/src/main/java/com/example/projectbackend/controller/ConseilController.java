@@ -3,6 +3,7 @@ package com.example.projectbackend.controller;
 import com.example.projectbackend.mapper.MedecinMapper;
 import com.example.projectbackend.model.dto.ConseilDTO;
 import com.example.projectbackend.model.dto.QuestionsDTO;
+import com.example.projectbackend.model.dto.ReponsesDTO;
 import com.example.projectbackend.service.ConseilService;
 import com.example.projectbackend.service.MedecinService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +30,9 @@ public class ConseilController {
     @PutMapping("/medecin/{idConseil}")
     public ConseilDTO addMedecin(@PathVariable int idConseil, @RequestParam int idMedecin) {
         return conseilService.addMedecin(idConseil, idMedecin);
+    }
+    @GetMapping
+    public List<ConseilDTO> getFindAllConseil(){
+        return conseilService.getAllConseil();
     }
 }

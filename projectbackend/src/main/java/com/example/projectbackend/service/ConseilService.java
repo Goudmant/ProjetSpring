@@ -59,19 +59,10 @@ public class ConseilService {
         }
 
     }
-
-    /*public List<ConseilDTO> getAllByMedecin(int id){
-        List<Conseil> conseil = conseilRepository.findAll();
-        Medecin medecin = medecinRepository.findById(id).orElse(null);
-
-        List<Conseil> getConseil()
+    public List<ConseilDTO> getAllConseil(){
+        return conseilRepository.findAll()
                 .stream()
                 .map(conseilMapper::ToDto)
                 .collect(Collectors.toList());
-
-        return conseilFiltered.stream()
-                .map(conseilMapper::ToDto)
-                .collect(Collectors.toList());
-
-    }*/
+    }
 }
