@@ -14,6 +14,7 @@ public class ThemeController {
 
     @Autowired
     private ThemeService themeService;
+
     @GetMapping
     public Set<ThemeDTO> getThemes(){
         return  themeService.getThemes();}

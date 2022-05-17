@@ -2,6 +2,7 @@ package com.example.projectbackend.service;
 
 import com.example.projectbackend.mapper.MedecinMapper;
 import com.example.projectbackend.model.dto.MedecinDTO;
+import com.example.projectbackend.repository.ConseilRepository;
 import com.example.projectbackend.repository.MedecinRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,10 +17,15 @@ public class MedecinService {
     @Autowired
     private MedecinMapper medecinMapper;
 
+
     public MedecinDTO save (MedecinDTO medecinDTO){
         return medecinMapper.ToDto(
                 medecinRepository.save(medecinMapper.toEntity(medecinDTO))
         );
+    }
+    public String deleteMedecin (int id) {
+        medecinRepository.deleteById(id);
+        return "Medecin deleted";
     }
     public Set<MedecinDTO> getMedecins(){
         return medecinRepository.findAll()
@@ -31,10 +37,5 @@ public class MedecinService {
         return medecinMapper.ToDto(
                 medecinRepository.findById(id).orElse(null)
         );
-    }
-
-    public String deleteMedecin (int id) {
-        medecinRepository.deleteById(id);
-        return "Medecin deleted";
     }
 }
