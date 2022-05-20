@@ -31,8 +31,8 @@ public class ConseilController {
     public ConseilDTO addMedecin(@PathVariable int idConseil, @RequestParam int idMedecin) {
         return conseilService.addMedecin(idConseil, idMedecin);
     }
-    @GetMapping
+/*    @GetMapping
     public List<ConseilDTO> getFindAllConseil(){
         return conseilService.getAllConseil();
-    }
+    }*/
 }

@@ -59,7 +59,7 @@ public class ConseilService {
         }
 
     }
-    public List<ConseilDTO> getAllConseil(){
+   public List<ConseilDTO> getAllConseil(){
         return conseilRepository.findAll()
                 .stream()
                 .map(conseilMapper::ToDto)
